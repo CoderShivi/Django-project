@@ -14,21 +14,17 @@ def homeView(request):
 
     # Creating a context dictionary to be used to render the template with info
     context ={
-        'product_list' : products # the key we create here, will be available as a variable in template design in 'home.html'
+        'product_list' : products, # the key we create here, will be available as a variable in template design in 'home.html'
+        'current_page':'home' # 
     }
+
     template = loader.get_template('home.html')
     return HttpResponse(template.render(context,request))
 
 
 def aboutView(request):
     context={
-        'name':"Krishna",
-        'student':[
-            "suraj",
-            "shivani",
-            "deepak"
-        ],
-        'slept':True
+       'current_page':'about' 
     }
     template = loader.get_template('about.html')
     return HttpResponse(template.render(context,request))

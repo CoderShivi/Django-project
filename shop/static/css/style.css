@@ -1,18 +1,85 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    header{
-        height: 50px;
-    container-fluid{
+body {
+  header {
+    height: 70px;
+    nav {
+      height: 100%;
+      background-color: aquamarine;
+      div.container-fluid {
         height: 100%;
+        a.navbar-brand {
+          img {
+            height: 35px;
+            background-color: white;
+            border-radius: 50%;
+          }
+          font-weight: 500;
+          font-style: italic;
+          color: #800080;
+        }
+        .navbar-nav .nav-item .nav-link {
+          color: #800080;
+        }
+        .link-active{
+            background-color: rgba(
+            218,
+            191,
+            228,
+            0.558
+          ); /* Light background effect */
+          border-radius: 5px; /* Optional: Add rounded corners */
+          transition: all 0.3s ease-in-out;
+          
+        }
+        .navbar-nav .nav-item .nav-link:hover {
+          color: #800080 !important; /* Change text color on hover */
+          background-color: rgba(
+            218,
+            191,
+            228,
+            0.558
+          ); /* Light background effect */
+          border-radius: 5px; /* Optional: Add rounded corners */
+          transition: all 0.3s ease-in-out; /* Smooth transition */
+        }
+      }
     }
+  }
+  main {
+    max-width: 100%;
+    /* background-color: antiquewhite; */
+    .container-fluid {
+      display: flex;
+      margin: 30px;
+      width: 90%;
+      justify-content: center;
+      .card-contain {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+          box-shadow: 1px 4px 5px 2px rgb(210, 178, 228);
+          width: 100%;
+          margin-left: 12px;
+          margin-top: 12px;
+          .card-body {
+            justify-content: center;
+            text-align: center;
+            a {
+              background-color: rgb(210, 178, 228);
+              color: white;
+            }
+          }
+        }
+      }
     }
-    main{
-        background-color: aqua
-        
-    }
+  }
 }
