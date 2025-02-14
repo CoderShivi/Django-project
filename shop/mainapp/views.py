@@ -7,6 +7,9 @@ from django.template import loader
 # to help return an http reponse to the user for any given request
 from django.http import HttpResponse
 
+# importing the generic class based views for CRUD operations
+from django.views.generic import CreateView, UpdateView, DeleteView
+
 # Create your views here.
 def homeView(request):
     #Querying the DB and getting a collection of product class objects from the records
