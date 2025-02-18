@@ -30,7 +30,9 @@ TrekTrend
     <div class="card" style="width: 17rem; height: 450px">
       <img src="{{product.pic}}" class="card-img-top" alt="..." height="50%" />
       <div class="card-body">
-        <h5 class="card-title">{{product.name}}</h5>
+        <h5 class="card-title">
+          <a href="{%url 'prod_details' product.id %}">
+          {{product.name}}</a></h5>
         <h6 class="">Price: Rs. {{product.price}}</h6>
         <p class="card-text">{{product.desc}}</p>
         <p>Item left: {{product.stock}}</p>
