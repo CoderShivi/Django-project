@@ -7,6 +7,7 @@
 body {
   header {
     height: 70px;
+    
     nav {
       height: 100%;
       background-color:#c294c288 ;
@@ -68,6 +69,7 @@ body {
       /* margin: 30px; */
       width: 90%;
       justify-content: center;
+      flex-direction: column;
       .card-contain {
         width: 100%;
         display: flex;
@@ -83,6 +85,13 @@ body {
           .card-body {
             justify-content: center;
             text-align: center;
+            .card-title{
+              a{text-decoration: none;
+                color: #800080;
+                background: none;
+
+              }
+            }
             a {
               background-color: rgb(210, 178, 228);
               color: white;

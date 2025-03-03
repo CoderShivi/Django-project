@@ -80,7 +80,7 @@ def searchView(request):
     query=request.GET.get('search_text')
     #fetch the query text from GET request
 
-    result =Product.objects.filter(name_icontains=query)
+    result =Product.objects.filter(name__icontains=query)
     # collect the product objects matching the name
     # This runs 'SELECT * FROM product WHERE name like  '%<query>%';
     # icontains is case-insensitive
@@ -89,7 +89,7 @@ def searchView(request):
         'items':result,
         'query':query
     }
-    template = loader.get_template('searchResult.html')
+    template = loader.get_template('searchResults.html')
     return HttpResponse(template.render(context,request))
 
 

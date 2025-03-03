@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+Search | {{query}}
+{% endblock %}
+{% block content %}
+<h2>search result for {{query}}</h2>
+<div class="container-fluid">
+    <div class="card-contain">
+      {% for product in items %}
+      <div class="card" style="width: 17rem; height: 450px">
+        <img src="{{product.pic.url}}" class="card-img-top" alt="..." height="50%" />
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="{%url 'prod_details' product.id %}">
+            {{product.name}}</a></h5>
+          <h6 class="">Price: Rs. {{product.price}}</h6>
+          <p class="card-text">{{product.desc}}</p>
+          <p>Item left: {{product.stock}}</p>
+          <a href="#" class="btn">Add to Cart</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

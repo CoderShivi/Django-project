@@ -26,7 +26,11 @@ urlpatterns = [
     path('', include('mainapp.urls')), # to include the paths configured in the app, here
     path('auth/',include('authentication.urls')), # including our authentication app urls
     path('auth/', include('django.contrib.auth.urls')), # including django's inbuilt auth urls
+    path('', include('cart.urls')),
+    path('', include('orders.urls')),
+    path('',include('payment.urls')),
 ]
+
 
 # the following line allows us to use the given media path during development
 if settings.DEBUG == True:

@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 # Now let's create the shema for our project
 # Any time we make any change in the class definitions, especially the variables,
@@ -19,3 +18,5 @@ class Product(models.Model):
     desc = models.TextField()
     pic = models.ImageField(upload_to='products/', null=False)
     stock=models.PositiveBigIntegerField(default=1)
+
+
